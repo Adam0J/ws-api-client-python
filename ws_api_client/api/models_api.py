@@ -38,20 +38,20 @@ class ModelsApi(object):
 
         Get a list of models that match given manufacturer and year (if present)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.models_list(make, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.models_list(make, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Model]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.models_list_with_http_info(make, **kwargs)  # noqa: E501
         else:
             (data) = self.models_list_with_http_info(make, **kwargs)  # noqa: E501
@@ -62,21 +62,21 @@ class ModelsApi(object):
 
         Get a list of models that match given manufacturer and year (if present)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.models_list_with_http_info(make, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.models_list_with_http_info(make, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`)
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Model]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['make', 'year', 'lang']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class ModelsApi(object):
             files=local_var_files,
             response_type='list[Model]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,20 +141,20 @@ class ModelsApi(object):
 
         Get the detailed information about model series  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.models_read(make, slug, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.models_read(make, slug, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str slug: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: ModelWithTires
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.models_read_with_http_info(make, slug, **kwargs)  # noqa: E501
         else:
             (data) = self.models_read_with_http_info(make, slug, **kwargs)  # noqa: E501
@@ -165,21 +165,21 @@ class ModelsApi(object):
 
         Get the detailed information about model series  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.models_read_with_http_info(make, slug, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.models_read_with_http_info(make, slug, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str slug: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: ModelWithTires
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['make', 'slug', 'lang']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -237,7 +237,7 @@ class ModelsApi(object):
             files=local_var_files,
             response_type='ModelWithTires',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -248,21 +248,21 @@ class ModelsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.models_read_year(make, slug, year, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.models_read_year(make, slug, year, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str slug: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: ModelWithTires
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.models_read_year_with_http_info(make, slug, year, **kwargs)  # noqa: E501
         else:
             (data) = self.models_read_year_with_http_info(make, slug, year, **kwargs)  # noqa: E501
@@ -273,22 +273,22 @@ class ModelsApi(object):
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.models_read_year_with_http_info(make, slug, year, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.models_read_year_with_http_info(make, slug, year, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str slug: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: ModelWithTires
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['make', 'slug', 'year', 'lang']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -352,7 +352,7 @@ class ModelsApi(object):
             files=local_var_files,
             response_type='ModelWithTires',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

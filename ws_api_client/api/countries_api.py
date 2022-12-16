@@ -38,17 +38,17 @@ class CountriesApi(object):
 
         List of possible countries to be used in any other API method. Indended to be used in case you want to restrict results for several countries.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.countries_list(async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.countries_list(asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :return: list[Country]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.countries_list_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.countries_list_with_http_info(**kwargs)  # noqa: E501
@@ -59,18 +59,18 @@ class CountriesApi(object):
 
         List of possible countries to be used in any other API method. Indended to be used in case you want to restrict results for several countries.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.countries_list_with_http_info(async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.countries_list_with_http_info(asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :return: list[Country]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -114,7 +114,7 @@ class CountriesApi(object):
             files=local_var_files,
             response_type='list[Country]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

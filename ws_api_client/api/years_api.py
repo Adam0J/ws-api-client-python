@@ -38,19 +38,19 @@ class YearsApi(object):
 
         Get a list of years that match the given manufacturer and model (if present)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.years_list(make, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.years_list(make, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str model: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`)
         :return: list[Year]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.years_list_with_http_info(make, **kwargs)  # noqa: E501
         else:
             (data) = self.years_list_with_http_info(make, **kwargs)  # noqa: E501
@@ -61,20 +61,20 @@ class YearsApi(object):
 
         Get a list of years that match the given manufacturer and model (if present)  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.years_list_with_http_info(make, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.years_list_with_http_info(make, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str model: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`)
         :return: list[Year]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['make', 'model']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -126,7 +126,7 @@ class YearsApi(object):
             files=local_var_files,
             response_type='list[Year]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

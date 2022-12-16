@@ -38,11 +38,11 @@ class VehiclesApi(object):
 
         Find OE and option fitments that match the given manufacturer, model, year and trim.  Please use _**`GET /search/by_model/`**_ instead as it is deprecated at the current moment.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.vehicles_list(make, model, year, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.vehicles_list(make, model, year, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str model: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
@@ -50,11 +50,11 @@ class VehiclesApi(object):
         :param bool only_oem: Show only original equipment wheels
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Vehicle]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.vehicles_list_with_http_info(make, model, year, **kwargs)  # noqa: E501
         else:
             (data) = self.vehicles_list_with_http_info(make, model, year, **kwargs)  # noqa: E501
@@ -65,11 +65,11 @@ class VehiclesApi(object):
 
         Find OE and option fitments that match the given manufacturer, model, year and trim.  Please use _**`GET /search/by_model/`**_ instead as it is deprecated at the current moment.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.vehicles_list_with_http_info(make, model, year, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.vehicles_list_with_http_info(make, model, year, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str model: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
@@ -77,12 +77,12 @@ class VehiclesApi(object):
         :param bool only_oem: Show only original equipment wheels
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Vehicle]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['make', 'model', 'year', 'trim', 'only_oem', 'lang']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -150,7 +150,7 @@ class VehiclesApi(object):
             files=local_var_files,
             response_type='list[Vehicle]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

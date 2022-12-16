@@ -38,11 +38,11 @@ class SearchApi(object):
 
         Get a list of model modifications that match the given tire size in high flotation sizing system  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_by_hf_tire_list(tire_diameter, tire_section_width, rim_diameter_hf, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.search_by_hf_tire_list(tire_diameter, tire_section_width, rim_diameter_hf, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param float tire_diameter: Tire diameter, in (e.g. `31`) (required)
         :param float tire_section_width: Tire section width, in (e.g. `10.5`) (required)
         :param float rim_diameter_hf: Rim diameter, in (e.g. `15`) (required)
@@ -52,11 +52,11 @@ class SearchApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[MakeWithModels]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.search_by_hf_tire_list_with_http_info(tire_diameter, tire_section_width, rim_diameter_hf, **kwargs)  # noqa: E501
         else:
             (data) = self.search_by_hf_tire_list_with_http_info(tire_diameter, tire_section_width, rim_diameter_hf, **kwargs)  # noqa: E501
@@ -67,11 +67,11 @@ class SearchApi(object):
 
         Get a list of model modifications that match the given tire size in high flotation sizing system  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_by_hf_tire_list_with_http_info(tire_diameter, tire_section_width, rim_diameter_hf, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.search_by_hf_tire_list_with_http_info(tire_diameter, tire_section_width, rim_diameter_hf, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param float tire_diameter: Tire diameter, in (e.g. `31`) (required)
         :param float tire_section_width: Tire section width, in (e.g. `10.5`) (required)
         :param float rim_diameter_hf: Rim diameter, in (e.g. `15`) (required)
@@ -81,12 +81,12 @@ class SearchApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[MakeWithModels]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['tire_diameter', 'tire_section_width', 'rim_diameter_hf', 'lang', 'brands', 'brands_exclude', 'countries', 'countries_exclude']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -158,7 +158,7 @@ class SearchApi(object):
             files=local_var_files,
             response_type='list[MakeWithModels]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -169,11 +169,11 @@ class SearchApi(object):
 
         Find OE and option fitments that match the given manufacturer, model, year and trim.  **It's an alias** for _**`GET /vehicles/`**_ method  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_by_model_list(make, model, year, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.search_by_model_list(make, model, year, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str model: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
@@ -181,11 +181,11 @@ class SearchApi(object):
         :param bool only_oem: Show only original equipment wheels
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Vehicle]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.search_by_model_list_with_http_info(make, model, year, **kwargs)  # noqa: E501
         else:
             (data) = self.search_by_model_list_with_http_info(make, model, year, **kwargs)  # noqa: E501
@@ -196,11 +196,11 @@ class SearchApi(object):
 
         Find OE and option fitments that match the given manufacturer, model, year and trim.  **It's an alias** for _**`GET /vehicles/`**_ method  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_by_model_list_with_http_info(make, model, year, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.search_by_model_list_with_http_info(make, model, year, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str make: Manufacturer slug name, use _**`GET /makes/`**_ to get possible values (e.g. `mitsubishi`) (required)
         :param str model: Model slug name, use _**`GET /models/`**_ to get possible values (e.g. `outlander`) (required)
         :param int year: You can use _**`GET /years/`**_ to get possible years (e.g. `2015`) (required)
@@ -208,12 +208,12 @@ class SearchApi(object):
         :param bool only_oem: Show only original equipment wheels
         :param str lang: Use this parameter anywhere in the API to get *`name`* field translation of the following objects: **`Make`**, **`Model`**, **`Market`**. Across the *`name`* this objects will have *`name_en`* field with original english name. By default `en` language is used.  Available languages: `en,de,ru,es,pt,fr,ja,zh-cn,zh-tw`. Currently translation works for chinese `zh-cn` language only
         :return: list[Vehicle]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['make', 'model', 'year', 'trim', 'only_oem', 'lang']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -281,7 +281,7 @@ class SearchApi(object):
             files=local_var_files,
             response_type='list[Vehicle]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -292,11 +292,11 @@ class SearchApi(object):
 
         Get a list of model modifications that match the given rim parameters, grouped by manufacturer.  It's an alias for _**`GET /bolt-patterns/{bolt_pattern}/`**_        method with given path and query parameters.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_by_rim_list(bolt_pattern, rim_diameter, rim_width, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.search_by_rim_list(bolt_pattern, rim_diameter, rim_width, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str bolt_pattern: Bolt pattern combines number of stud holes and pitch circle diameter. Use _**`GET /bolt-patterns/`**_ to get possible values (e.g. `5x105`) (required)
         :param float rim_diameter: Rim diameter, in (e.g. `16`) (required)
         :param float rim_width: Rim width, in (e.g. `7`) (required)
@@ -312,11 +312,11 @@ class SearchApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[MakeWithModels]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.search_by_rim_list_with_http_info(bolt_pattern, rim_diameter, rim_width, **kwargs)  # noqa: E501
         else:
             (data) = self.search_by_rim_list_with_http_info(bolt_pattern, rim_diameter, rim_width, **kwargs)  # noqa: E501
@@ -327,11 +327,11 @@ class SearchApi(object):
 
         Get a list of model modifications that match the given rim parameters, grouped by manufacturer.  It's an alias for _**`GET /bolt-patterns/{bolt_pattern}/`**_        method with given path and query parameters.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_by_rim_list_with_http_info(bolt_pattern, rim_diameter, rim_width, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.search_by_rim_list_with_http_info(bolt_pattern, rim_diameter, rim_width, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str bolt_pattern: Bolt pattern combines number of stud holes and pitch circle diameter. Use _**`GET /bolt-patterns/`**_ to get possible values (e.g. `5x105`) (required)
         :param float rim_diameter: Rim diameter, in (e.g. `16`) (required)
         :param float rim_width: Rim width, in (e.g. `7`) (required)
@@ -347,12 +347,12 @@ class SearchApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[MakeWithModels]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['bolt_pattern', 'rim_diameter', 'rim_width', 'offset', 'offset_min', 'offset_max', 'cb', 'cb_min', 'cb_max', 'lang', 'brands', 'brands_exclude', 'countries', 'countries_exclude']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -436,7 +436,7 @@ class SearchApi(object):
             files=local_var_files,
             response_type='list[MakeWithModels]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -447,11 +447,11 @@ class SearchApi(object):
 
         Get a list of model modifications matching given tire, grouped by manufacturer.  It's an alias for _**`GET /tire/{tire}/`**_ method  (tire configuration is combined of required tire width, aspect ratio and rim diameter).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_by_tire_list(tire_width, aspect_ratio, rim_diameter, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.search_by_tire_list(tire_width, aspect_ratio, rim_diameter, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param float tire_width: Tire width, mm (e.g. `195`) (required)
         :param float aspect_ratio: Aspect ratio, % (e.g. `50`) (required)
         :param float rim_diameter: Rim diameter, in (e.g. `16`) (required)
@@ -461,11 +461,11 @@ class SearchApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[MakeWithModels]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.search_by_tire_list_with_http_info(tire_width, aspect_ratio, rim_diameter, **kwargs)  # noqa: E501
         else:
             (data) = self.search_by_tire_list_with_http_info(tire_width, aspect_ratio, rim_diameter, **kwargs)  # noqa: E501
@@ -476,11 +476,11 @@ class SearchApi(object):
 
         Get a list of model modifications matching given tire, grouped by manufacturer.  It's an alias for _**`GET /tire/{tire}/`**_ method  (tire configuration is combined of required tire width, aspect ratio and rim diameter).  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.search_by_tire_list_with_http_info(tire_width, aspect_ratio, rim_diameter, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.search_by_tire_list_with_http_info(tire_width, aspect_ratio, rim_diameter, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param float tire_width: Tire width, mm (e.g. `195`) (required)
         :param float aspect_ratio: Aspect ratio, % (e.g. `50`) (required)
         :param float rim_diameter: Rim diameter, in (e.g. `16`) (required)
@@ -490,12 +490,12 @@ class SearchApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[MakeWithModels]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['tire_width', 'aspect_ratio', 'rim_diameter', 'lang', 'brands', 'brands_exclude', 'countries', 'countries_exclude']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -567,7 +567,7 @@ class SearchApi(object):
             files=local_var_files,
             response_type='list[MakeWithModels]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

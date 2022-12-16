@@ -38,11 +38,11 @@ class BoltPatternsApi(object):
 
         A list of possible bolt patterns with the number of matching model modifications  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bolt_patterns_list(async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.bolt_patterns_list(asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param float stud: Number of stud holes (e.g. `5`)
         :param float stud_min: Lower bound for number of stud holes (e.g. `4`)
         :param float stud_max: Upper bound for number of stud holes (e.g. `7`)
@@ -54,11 +54,11 @@ class BoltPatternsApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[BoltPattern]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.bolt_patterns_list_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.bolt_patterns_list_with_http_info(**kwargs)  # noqa: E501
@@ -69,11 +69,11 @@ class BoltPatternsApi(object):
 
         A list of possible bolt patterns with the number of matching model modifications  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bolt_patterns_list_with_http_info(async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.bolt_patterns_list_with_http_info(asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param float stud: Number of stud holes (e.g. `5`)
         :param float stud_min: Lower bound for number of stud holes (e.g. `4`)
         :param float stud_max: Upper bound for number of stud holes (e.g. `7`)
@@ -85,12 +85,12 @@ class BoltPatternsApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[BoltPattern]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['stud', 'stud_min', 'stud_max', 'pcd', 'pcd_min', 'pcd_max', 'brands', 'brands_exclude', 'countries', 'countries_exclude']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -154,7 +154,7 @@ class BoltPatternsApi(object):
             files=local_var_files,
             response_type='list[BoltPattern]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronoushronous=params.get('asynchronoushronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -165,11 +165,11 @@ class BoltPatternsApi(object):
 
         Get a list of model modifications matching to the given bolt pattern  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bolt_patterns_read(bolt_pattern, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.bolt_patterns_read(bolt_pattern, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str bolt_pattern: Bolt pattern combines number of stud holes and pitch circle diameter. Use _**`GET /bolt-patterns/`**_ to get possible values (e.g. `5x105`) (required)
         :param float rim_diameter: Rim diameter, in (e.g. `16`)
         :param float rim_width: Rim width, in (e.g. `7`)
@@ -185,11 +185,11 @@ class BoltPatternsApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[MakeWithModels]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('asynchronous'):
             return self.bolt_patterns_read_with_http_info(bolt_pattern, **kwargs)  # noqa: E501
         else:
             (data) = self.bolt_patterns_read_with_http_info(bolt_pattern, **kwargs)  # noqa: E501
@@ -200,11 +200,11 @@ class BoltPatternsApi(object):
 
         Get a list of model modifications matching to the given bolt pattern  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bolt_patterns_read_with_http_info(bolt_pattern, async=True)
+        asynchronoushronous HTTP request, please pass asynchronous=True
+        >>> thread = api.bolt_patterns_read_with_http_info(bolt_pattern, asynchronous=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param asynchronous bool
         :param str bolt_pattern: Bolt pattern combines number of stud holes and pitch circle diameter. Use _**`GET /bolt-patterns/`**_ to get possible values (e.g. `5x105`) (required)
         :param float rim_diameter: Rim diameter, in (e.g. `16`)
         :param float rim_width: Rim width, in (e.g. `7`)
@@ -220,12 +220,12 @@ class BoltPatternsApi(object):
         :param str countries: Show information for local manufacturers from specified countries only. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `us,gb,jp`)
         :param str countries_exclude: Don't show information for local manufacturers from specified countries. Use _**`GET /countries/`**_ method to get the full list of countries. (e.g. `ru,ua`)
         :return: list[MakeWithModels]
-                 If the method is called asynchronously,
+                 If the method is called asynchronoushronously,
                  returns the request thread.
         """
 
         all_params = ['bolt_pattern', 'rim_diameter', 'rim_width', 'offset', 'offset_min', 'offset_max', 'cb', 'cb_min', 'cb_max', 'lang', 'brands', 'brands_exclude', 'countries', 'countries_exclude']  # noqa: E501
-        all_params.append('async')
+        all_params.append('asynchronous')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -301,7 +301,7 @@ class BoltPatternsApi(object):
             files=local_var_files,
             response_type='list[MakeWithModels]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            asynchronous=params.get('asynchronous'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
